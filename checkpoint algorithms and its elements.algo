@@ -1,0 +1,22 @@
+ALGORITHM string_count
+VAR
+i,words_nbr,char_nbr,vowels_nbr:INTEGER;
+str:STRING[60];
+BEGIN
+Write("enter your sentence:");
+Read(str);
+char_nbr:=str.length;
+words_nbr:=1;
+vowels_nbr:=0;
+FOR i FROM 0 TO str.length-1 STEP 1  DO 
+IF (str[i]="") THEN
+words_nbr:=words_nbr+1;
+END_IF
+IF (str[i] in ["a","e","o","i","u"]) THEN
+vowels_nbr:=vowels_nbr+1;
+END_IF
+Write(char_nbr);
+Write(words_nbr);
+Write(vowels_nbr);
+END_FOR
+END
